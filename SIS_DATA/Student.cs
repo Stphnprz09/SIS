@@ -1,4 +1,5 @@
 ﻿using System;
+using SIS_MODEL;
 namespace SIS_DATA
 {
 	public class Student

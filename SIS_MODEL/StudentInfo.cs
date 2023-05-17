@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SIS_DATA
+namespace SIS_MODEL
 {
 	public class StudentInfo
 	{

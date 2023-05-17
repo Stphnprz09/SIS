@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIS_UI", "SIS_UI\SIS_UI.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIS_RULES", "SIS_RULES\SIS_RULES.csproj", "{63353300-1758-4DBC-9980-1D0CE8322C91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIS_MODEL", "SIS_MODEL\SIS_MODEL.csproj", "{33FBE224-2E69-41F6-BA04-7773B6625E0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{63353300-1758-4DBC-9980-1D0CE8322C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63353300-1758-4DBC-9980-1D0CE8322C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63353300-1758-4DBC-9980-1D0CE8322C91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33FBE224-2E69-41F6-BA04-7773B6625E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33FBE224-2E69-41F6-BA04-7773B6625E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33FBE224-2E69-41F6-BA04-7773B6625E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33FBE224-2E69-41F6-BA04-7773B6625E0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
