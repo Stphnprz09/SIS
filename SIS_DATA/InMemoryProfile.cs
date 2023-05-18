@@ -9,7 +9,7 @@ namespace SIS_DATA
 
         }
 
-        public static void stud1()
+        public static void profile1()
         {
             StudentInfo student1 = new StudentInfo("Stephen Mathew C. Perez", "BSIT", 2, 1, "2021-00066-BN-0");
 

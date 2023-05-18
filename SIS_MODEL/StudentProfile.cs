@@ -1,7 +1,7 @@
 ﻿using System;
 namespace SIS_MODEL
 {
-	public class StudentInfo
+	public class StudentInfo 
 	{
         public String fullName { get; set; }
         public String program { get; set; }

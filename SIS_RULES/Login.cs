@@ -37,7 +37,7 @@ namespace SIS_RULES
 
         static bool CheckCredentials(string schoolmail, string password)
         {
-            return schoolmail == "myschoolmail" && password == "mypassword";
+            return schoolmail == "2021-00066-BN-0" && password == "admin123";
         }
     }
 }

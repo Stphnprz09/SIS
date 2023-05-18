@@ -17,7 +17,7 @@ namespace SIS_RULES
             switch (choices)
             {
                 case 1:
-                    Student.stud1();
+                    Student.profile1();
                     Display.profileDisplay();
                     actionProfileDisplay();
                     break;
