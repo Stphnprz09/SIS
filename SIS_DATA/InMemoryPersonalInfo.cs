@@ -3,7 +3,7 @@ using System;
 
 namespace SIS_DATA
 {
-    public class StudentPersonalInfo
+    public class InMemoryPersonalInfo
     {
         public static void PersonalInfo1()
         {
@@ -18,7 +18,7 @@ namespace SIS_DATA
                 "Platero Binan City Laguna");
 
             Console.WriteLine("\n------------------------------------------------");
-            Console.WriteLine("STUDENT PROFILE");
+            Console.WriteLine("PERSONAL INFORMATION");
             Console.WriteLine("------------------------------------------------");
             Console.WriteLine("Student Number: " + student1.studentNumber);
             Console.WriteLine("Name: " + student1.Name);

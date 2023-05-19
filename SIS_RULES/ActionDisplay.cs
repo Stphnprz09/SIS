@@ -42,12 +42,14 @@ namespace SIS_RULES
 
             switch (choices)
             {
-                case 1: //other information
-                    Console.WriteLine("Under Construction");
+                case 1: //personal information
+                    //Console.WriteLine("Under Construction");
+                    InMemoryPersonalInfo.PersonalInfo1();
                     break;
 
                 case 2: //course description
-                    Console.WriteLine("Under Construction");
+                    //Console.WriteLine("Under Construction");
+                    CourseDescription.showCouseDescription();
                     break;
                 case 3:
                     //Console.WriteLine("Under Construction");

@@ -4,11 +4,7 @@ namespace SIS_DATA
 {
 	public class Student
 	{
-        static void Main(string[] agrs)
-        {
-
-        }
-
+     
         public static void profile1()
         {
             StudentInfo student1 = new StudentInfo("Stephen Mathew C. Perez", "BSIT", 2, 1, "2021-00066-BN-0");
