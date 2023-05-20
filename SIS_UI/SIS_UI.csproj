@@ -7,7 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SIS_RULES\SIS_RULES.csproj" />
-  </ItemGroup>
 </Project>

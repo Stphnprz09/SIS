@@ -1,5 +1,5 @@
 ﻿using System;
-namespace SIS_RULES
+namespace RULES
 {
 	public class CommonCodes
 	{
@@ -10,7 +10,7 @@ namespace SIS_RULES
 
         public static void readKey()
         {
-            Console.WriteLine("<please enter to continue>\n");
+            Console.WriteLine("\n<please enter to continue>\n");
             Console.ReadKey();
         }
     }
