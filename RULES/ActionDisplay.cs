@@ -9,7 +9,7 @@ namespace RULES
         public static int choices;
         public static char commandOption;
 
-
+        //viewing main interface
         public static int actionMainDisplay()
         {
             choices = Convert.ToInt32(Console.ReadLine());
@@ -22,8 +22,9 @@ namespace RULES
                     break;
 
                 case 2: //personal info
-                    Display.viewPersonalInfo();
-                    actionReturn(commandOption);
+                    //Display.viewPersonalInfo();
+                    Display.viewMenuPersonalInfo();
+                    //actionReturn(commandOption);
                     break;
 
                 case 3: //course description
@@ -39,6 +40,7 @@ namespace RULES
             return choices;
         }
 
+        //validating if student,faculty,admin
         public static void actionSISType()
         {
             SISType type;
@@ -67,6 +69,7 @@ namespace RULES
 
         }
 
+        //command to return
         public static void actionReturn(char commandOption)
         {
             Console.Write("\nDo you want to continue?[type any to continue/type N to end]\n");
@@ -81,6 +84,26 @@ namespace RULES
             }
             Console.WriteLine("\nSystem end");
 
+        }
+
+        //choices for student personal info
+        public static void actionPersonalInfo()
+        {
+            choices = Convert.ToInt32(Console.ReadLine());
+            switch (choices)
+            {
+                case 1: //viewing
+                    Display.viewPersonalInfo();
+                    actionReturn(commandOption);
+                    break;
+
+                case 2: //updating
+                    UpdateClass.editPersonalInfo();
+                    break;
+
+                case 3:
+                    break;
+            }
         }
     }
 }

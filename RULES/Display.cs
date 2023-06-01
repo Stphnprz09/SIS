@@ -37,7 +37,7 @@ namespace RULES
         {
             PersonalInfo Person = getCredentials.person.personalInfo[getCredentials.studentNumber];
             Console.WriteLine("-----------------------------------------------------------");
-            Console.WriteLine("PERSONAL INFORMATION");
+            Console.WriteLine("VIEW PERSONAL INFORMATION");
             Console.WriteLine("-----------------------------------------------------------");
             Console.WriteLine($"Name: {Person.fullName}");
             Console.WriteLine($"Gender: {Person.Gender}");
@@ -48,6 +48,20 @@ namespace RULES
             Console.WriteLine($"Residential Address: {Person.residentialAddress}");
             Console.WriteLine($"Permanent Address: {Person.permanentAdress}");
             Console.WriteLine("-----------------------------------------------------------");
+        }
+
+        public static void viewMenuPersonalInfo()
+        {
+            Console.WriteLine("-----------------------------------------------------------");
+            Console.WriteLine("PERSONAL INFORMATION");
+            Console.WriteLine("-----------------------------------------------------------");
+            Console.WriteLine(">> Please enter a number you want to choose");
+            Console.WriteLine("[1] - View Personal Information");
+            Console.WriteLine("[2] - Edit Personal Information");
+            Console.WriteLine("[3] - Go Back");
+            Console.WriteLine("-----------------------------------------------------------");
+            CommonCodes.userInput();
+            ActionDisplay.actionPersonalInfo();
         }
     }
 }
