@@ -1,8 +1,7 @@
 ﻿using System;
 using DATA;
-using MODEL;
 
-namespace RULES
+namespace UI
 {
 	public class getCredentials
 	{
@@ -11,26 +10,27 @@ namespace RULES
 
 		public static string studentNumber;
 
-        public static void userCredentials()
+        public static void userStudentCredentials()
 		{
 			info.infos();
-			person.studentPersonalInfo();
+			//person.studentPersonalInfo();
 
             Console.Write("\nEnter your account number: ");
 			studentNumber = Console.ReadLine();
 
-			DisplaySIS(studentNumber);
+			DisplayStudentSIS(studentNumber);
         }
 
-		public static void DisplaySIS(String studentNumber)
+		public static void DisplayStudentSIS(String studentNumber)
 		{
 			if (info.studentInfo.ContainsKey(studentNumber))
 			{
 				Console.WriteLine("\nSuccessful Login\n");
                 Console.WriteLine($"Welcome {studentNumber}");
-                CommonCodes.readKey();
-				Display.mainDisplay();
-				ActionDisplay.actionMainDisplay();
+				CommonCodes.readKey();
+				Display.studentMainDisplay();
+
+				
             }
 			else
 			{

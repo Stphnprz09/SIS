@@ -1,9 +1,9 @@
 ﻿using System;
 namespace MODEL
 {
-    public class PersonalInfo : User
+    public class PersonalInfo
     {
-        
+        public String fullname { get; set; }
         public String Gender { get; set; }
         public DateTime DateofBirth { get; set; }
         public String placeofBirth { get; set; }
@@ -12,11 +12,11 @@ namespace MODEL
         public String residentialAddress { get; set; }
         public String permanentAdress { get; set; }
 
-        public PersonalInfo(string fullName,string gender, DateTime dateofBirth, string placeofBirth, long mobileNo, string emailAddress, string residentialAddress, string permanentAdress) : base(fullName)
+        public PersonalInfo(string fullName,string Gender, DateTime dateofBirth, string placeofBirth, long mobileNo, string emailAddress, string residentialAddress, string permanentAdress)
         {
-            this.fullName = fullName;
-            Gender = gender;
-            DateofBirth = dateofBirth;
+            this.fullname = fullName;
+            this.Gender = Gender;
+            this.DateofBirth = dateofBirth;
             this.placeofBirth = placeofBirth;
             this.mobileNo = mobileNo;
             this.emailAddress = emailAddress;

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
-using RULES;
+using MODEL;
 
 namespace UI;
 class Program
@@ -14,7 +13,31 @@ class Program
         {
             Console.WriteLine(view);
         }
-        ActionDisplay.actionSISType();
+        SISType type;
+
+        //Validating if user is student,faculty,admin
+        CommonCodes.userInput();
+        CommonCodes.intChoices = Convert.ToInt32(Console.ReadLine());
+
+        switch (CommonCodes.intChoices)
+        {
+            case 1: //student
+                type = SISType.Student;
+                getCredentials.userStudentCredentials();
+                break;
+
+            case 2: //faculty
+                type = SISType.Faculty;
+                break;
+            case 3: //admin
+                type = SISType.Admin;
+                break;
+
+            default:
+
+                break;
+        }
+
     }
 }
 

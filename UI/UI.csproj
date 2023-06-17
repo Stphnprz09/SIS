@@ -10,5 +10,6 @@
   <ItemGroup>
     <ProjectReference Include="..\DATA\DATA.csproj" />
     <ProjectReference Include="..\RULES\RULES.csproj" />
+    <ProjectReference Include="..\MODEL\MODEL.csproj" />
   </ItemGroup>
 </Project>
