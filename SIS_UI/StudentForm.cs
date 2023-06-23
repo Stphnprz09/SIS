@@ -109,7 +109,7 @@ namespace SIS_UI
 
         public static void studentInformation()
         {
-
+            Console.WriteLine("Testing");
         }
     }
 }
