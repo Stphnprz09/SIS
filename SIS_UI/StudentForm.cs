@@ -31,29 +31,30 @@ namespace SIS_UI
         }
 
         //Interface when updating an Personal Information
-        //public static int actionUpdateStudentPersonalInfo()
-        //{
-        //    Console.WriteLine("\nCurrent personal information\n");
-        //    PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
+        public static int actionUpdateStudentPersonalInfo()
+        {
+            Console.WriteLine("\nCurrent personal information\n");
+            PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
 
-        //    Console.WriteLine("\nEDIT PERSONAL INFORMATION\n");
-        //    Console.WriteLine("Please choose an action: ");
-        //    Console.WriteLine("[1] - Name");
-        //    Console.WriteLine("[2] - Birthday");
-        //    Console.WriteLine("[3] - SIS Account Number");
-        //    Console.WriteLine("[4] - Date of Birth");
-        //    Console.WriteLine("[5] - Place of Birth");
-        //    Console.WriteLine("[6] - Mobile Number");
-        //    Console.WriteLine("[7] - Email Address");
-        //    Console.WriteLine("[8] - Residential Address");
-        //    Console.WriteLine("[9] - Permanent Address");
-        //    Console.Write("Input: ");
-        //    return Convert.ToInt32(Console.ReadLine());
-        //}
+            Console.WriteLine("\nEDIT PERSONAL INFORMATION\n");
+            Console.WriteLine("Please choose an action: ");
+            Console.WriteLine("[0] - Cancel");
+            Console.WriteLine("[1] - Name");
+            Console.WriteLine("[2] - Birthday");
+            Console.WriteLine("[3] - SIS Account Number");
+            Console.WriteLine("[4] - Date of Birth");
+            Console.WriteLine("[5] - Place of Birth");
+            Console.WriteLine("[6] - Mobile Number");
+            Console.WriteLine("[7] - Email Address");
+            Console.WriteLine("[8] - Residential Address");
+            Console.WriteLine("[9] - Permanent Address");
+            Console.Write("Input: ");
+            return Convert.ToInt32(Console.ReadLine());
+        }
 
         public static string getSISAcc()
         {
-            Console.WriteLine("Enter the SIS account number of the student to verify changes:");
+            Console.WriteLine("\nEnter the SIS account number of the student to verify changes:");
             return Console.ReadLine();
         }
         public static string updatePlaceOfBirth()
@@ -89,12 +90,16 @@ namespace SIS_UI
         //method to call success update
         public static void successUpdate()
         {
-            Console.WriteLine("Student personal information updated successfully.");
+            Console.WriteLine("\nStudent personal information updated successfully.");
+            Console.WriteLine("Here's the updated personal information\n");
+
+            PrintInfos.PrintStudentPersonalInfo(username);
         } 
 
         public static void nonEditable()
         {
-            Console.WriteLine("This information is not editable");
+            Console.WriteLine("\nThis information is not editable");
+            Console.WriteLine("Please try again");
         }
 
         public static void attendance()
@@ -107,10 +112,8 @@ namespace SIS_UI
             Console.WriteLine("\nOn Progress of Rizon's Group\n");
         }
 
-        public static void studentInformation()
-        {
-            Console.WriteLine("Testing");
-        }
+        
+
     }
 }
 

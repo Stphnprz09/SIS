@@ -35,21 +35,35 @@ namespace SIS_RULES
 								PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
 								break;
 							case 2:
-								doUpdate();
-								//status = StudentForm.actionUpdateStudentPersonalInfo();
-								//switch (status)
-								//{
-								//	case 1:StudentForm.nonEditable(); break;
-        //                            case 2: 
-        //                            case 5: break;
-        //                            case 6: break;
-        //                            case 7: break;
-        //                            case 8: break;
-        //                            case 9: break;
-        //                        }
+								//doUpdate();
+								action = StudentForm.actionUpdateStudentPersonalInfo();
+								switch (action)
+								{
+									//cancel
+									case 0: break;
+									//SIS Account
+                                    case 1: StudentForm.nonEditable();break;
+									//Name
+                                    case 2: StudentForm.nonEditable(); break;
+									//Gender
+                                    case 3: StudentForm.nonEditable(); break;
+									//Date Of Birth
+                                    case 4: StudentForm.nonEditable(); break;
+									//Place Of Birth
+                                    case 5: doUpdatePOB(); break;
+									//Mobile Number
+                                    case 6: doUpdateMobile(); break;
+									//Email Address
+                                    case 7: doUpdateEmailAddress(); break;
+									//Residential Add
+                                    case 8: doUpdateResidentialAddress(); break;
+									//Permanent Add
+                                    case 9: doUpdatePermanentAddress(); break;
+
+                                }
+								
 								break;
 						}
-						//PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
 						break;
 
 					case 3: StudentForm.gradingSystem(); break;
@@ -58,51 +72,107 @@ namespace SIS_RULES
 			} while (status == null);
 		}
 
-       public static void updatePersonalInfo(string sisAccountNumber)
+
+        //Update Place of Birth
+		public static void updatePlaceOfBirth(string sisAccountNumber)
 		{
-            //StudentPersonalInfo studentinfo = InMemoryStudentPersonalInfo.StudentPersonalInfos.FirstOrDefault(personal => personal.SISAccountNumber.Equals(sisAccountNumber));
             InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
             StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
 
-            if (studentinfo != null)
-			{
-                //StudentForm.updatePlaceOfBirth();
-                string placeOfBirth = StudentForm.updatePlaceOfBirth();
-                //StudentForm.updateContactNumber();
-                long contactNumber = StudentForm.updateContactNumber();
-                //StudentForm.updateEmailAddress();
-                string emailAddress = StudentForm.updateEmailAddress();
-                //StudentForm.updateResidentialAdd();
-                string residentialAdd = StudentForm.updateResidentialAdd();
-                //StudentForm.updatePermanentAdd();
-                string permanentAdd = StudentForm.updatePermanentAdd();
+            string placeOfBirth = StudentForm.updatePlaceOfBirth();
 
-                //updating
+            studentinfo.placeofBirth = placeOfBirth;
 
-                studentinfo.placeofBirth = placeOfBirth;
-				studentinfo.mobileNo = contactNumber;
-				studentinfo.emailAddress = emailAddress;
-				studentinfo.residentialAddress = residentialAdd;
-				studentinfo.permanentAdress = permanentAdd;
-            }
-
-			
-
-			StudentForm.successUpdate();
-			Console.WriteLine("\nViewing Updated Student Personal Information:");
-
-			PrintInfos.PrintStudentPersonalInfo(StudentForm.username);
-			//PrintInfos.ViewStudentPersonalInfo();
-		}
-
-		public static void doUpdate()
-		{
-			string sisAccount = StudentForm.getSISAcc();
-			updatePersonalInfo(sisAccount);
+            StudentForm.successUpdate();
         }
 
-		
+        public static void doUpdatePOB()
+        {
+            string sisAccount = StudentForm.getSISAcc();
+            updatePlaceOfBirth(sisAccount);
+        }
+
+
+        //Update MObile Number
+        public static void updateMobileNumber(string sisAccountNumber)
+        {
+            InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
+            StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
+
+            long mobileNumber = StudentForm.updateContactNumber();
+
+            studentinfo.mobileNo = mobileNumber;
+
+            StudentForm.successUpdate();
+        }
+
+        public static void doUpdateMobile()
+        {
+            string sisAccount = StudentForm.getSISAcc();
+            updateMobileNumber(sisAccount);
+        }
+
+        //Update Email Address
+        public static void updateEmailAdd(string sisAccountNumber)
+        {
+            InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
+            StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
+
+            string emailAddress = StudentForm.updateEmailAddress();
+
+            studentinfo.emailAddress = emailAddress;
+
+            StudentForm.successUpdate();
+        }
+
+        public static void doUpdateEmailAddress()
+        {
+            string sisAccount = StudentForm.getSISAcc();
+            updateEmailAdd(sisAccount);
+        }
+
+
+        //Update Residential Address
+        public static void updateResidentialAdd(string sisAccountNumber)
+        {
+            InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
+            StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
+
+            string residentialAddress = StudentForm.updateResidentialAdd();
+
+            studentinfo.residentialAddress = residentialAddress;
+
+            StudentForm.successUpdate();
+        }
+
+        public static void doUpdateResidentialAddress()
+        {
+            string sisAccount = StudentForm.getSISAcc();
+            updateResidentialAdd(sisAccount);
+        }
+
+        //Update Permanent Address
+        public static void updatePermanentAdd(string sisAccountNumber)
+        {
+            InMemoryStudentPersonalInfo personalinfo = new InMemoryStudentPersonalInfo();
+            StudentPersonalInfo studentinfo = personalinfo.GetStudentPersonalInfoBySISAccountNumber(sisAccountNumber);
+
+            string permanentAddress = StudentForm.updatePermanentAdd();
+
+            studentinfo.residentialAddress = permanentAddress;
+
+            StudentForm.successUpdate();
+        }
+
+        public static void doUpdatePermanentAddress()
+        {
+            string sisAccount = StudentForm.getSISAcc();
+            updatePermanentAdd(sisAccount);
+        }
+
         
+
+
 
 
     }
